@@ -1,0 +1,35 @@
+<h1 style="text-align: center">missed connections</h1>
+<br>
+<center>
+
+<div class="A">a</div>
+
+sort by train line:
+  <a href="/a"><p class="A" id="train-line"><b>A</b></p></a>
+
+</center>
+<hr>
+
+<div class="wrap">
+<% @connections.each do |connection| %>
+<div class="connection">
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+        <p class="<%= connection.train %>" id="train-line"><b><%= connection.train %></b></p>
+    </div>
+    <div class="back">
+      <HR>
+      <p id="connection-text">
+      "...<%= connection.message %>"
+      <br>
+
+      <!-- <button type="button" class='remove'>delete</button> -->
+    </p>
+      <BR>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+</div>

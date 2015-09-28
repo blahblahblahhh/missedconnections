@@ -1,0 +1,131 @@
+/* ------------------------ body styling */
+html {
+  min-height: 100%;
+  background: -webkit-linear-gradient(white, grey);
+  background: linear-gradient(white, grey);
+  background-size: cover;
+}
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 200;
+  line-height:1.45;
+	color:#353535;
+	-webkit-font-smoothing:antialiased;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+}
+ul, #nav {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+li {
+  display: inline-block;
+}
+h1, h2, h3, h4, h5, h6 {
+	font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+.wrap {
+  margin: 0 auto;
+  text-align: center;
+}
+.connection {
+  padding: 25px;
+  display: inline-block;
+}
+
+.accordion-toggle {cursor: pointer;}
+.accordion-content {display: none;}
+.accordion-content.default {display: block;}
+
+/* ---------------- card fipping  ----- */
+/* entire container, keeps perspective */
+.flip-container {
+perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+width: 220px;
+height: 220px;
+overflow: scroll;
+}
+
+/* flip speed goes here */
+.flipper {
+transition: 0.6s;
+transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+backface-visibility: hidden;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+/*background-color: red;*/
+background: rgb(54, 25, 25);
+background: rgba(54, 25, 25, .2);
+z-index: 2;
+/* for firefox 31 */
+transform: rotateY(0deg);
+border-radius: 50%;
+}
+
+/* back, initially hidden pane */
+.back {
+background-color: #000;
+transform: rotateY(180deg);
+color: #fff;
+}
+.cards {
+  float: left;
+  padding: 10px;
+}
+
+#train-line b {
+font-weight: bold;
+color: #fff;
+font-size: 2.2em;
+}
+
+#connection-text {
+  margin: 15px;
+  padding: 15px;
+}
+
+/* --------------- train line classes */
+.A, .C, .E {
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.L {
+  background-color: grey;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.B, .F, .M {
+  background-color: orange;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}

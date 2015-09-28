@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mtHEY</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/template" id='connection-template'>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+            <p class="<%%= train %>" id="train-line"><b><%%= train %></b></p>
+        </div>
+        <div class="back">
+          <HR>
+          <p id="connection-text">
+          "...<%%= message %>"
+          <br>
+
+          <button type="button" class='remove'>delete</button>
+        </p>
+          <BR>
+        </div>
+      </div>
+    </div>
+  </script>
+
+</head>
+<body>
+
+  <%= yield %>
+
+  <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
+</body>
+</html>
