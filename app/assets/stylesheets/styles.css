@@ -65,6 +65,7 @@ transform-style: preserve-3d;
 /* hide back of pane during swap */
 .front, .back {
 backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
 position: absolute;
 margin-top: 0;
 margin-left: 0;
