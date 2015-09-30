@@ -43,10 +43,13 @@ perspective: 1000;
 }*/
 .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip, .flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
 }
 
 .flip-container, .front, .back {
@@ -92,6 +95,9 @@ transform: rotateY(0deg);
 -o-transform: rotateY(0deg);
 border-radius: 50%;
 }
+.font {
+  -webkit-transform: rotateY(0deg);
+}
 
 /* back, initially hidden pane */
 .back {
@@ -102,6 +108,9 @@ transform: rotateY(180deg);
 -moz-transform: rotateY(180deg);
 -o-transform: rotateY(180deg);
 color: #fff;
+}
+.back {
+  -webkit-transform: rotateY(180deg);
 }
 .cards {
   /*float: left;*/
