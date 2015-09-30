@@ -95,8 +95,9 @@ transform: rotateY(0deg);
 -o-transform: rotateY(0deg);
 border-radius: 50%;
 }
-.font {
+.front {
   -webkit-transform: rotateY(0deg);
+  -webkit-backface-visibility: hidden;
 }
 
 /* back, initially hidden pane */
@@ -111,6 +112,7 @@ color: #fff;
 }
 .back {
   -webkit-transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
 }
 .cards {
   /*float: left;*/
