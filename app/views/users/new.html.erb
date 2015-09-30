@@ -1,14 +1,21 @@
-<h1>sign up</h1>
-
-<form class="" action="/users" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <label>username:</label>
-  <input type="text" name="user[username]" value="" placeholder="username">
-  <label>email:</label>
-  <input type="text" name="user[email]" value="" placeholder="email">
-  <label>password:</label>
-  <input type="password" name="user[password]" value="" placeholder="password">
-  <label>confirm password:</label>
-  <input type="password" name="user[password_confirmation]" value="" placeholder="password confirmation">
-  <button type="submit" name="button">sign up</button>
-</form>
+<div class="input-container">
+  <form action="/users" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <fieldset class="user-fieldset">
+      <h2 class="signup-info">Sign Up</h2>
+      <p id="first-input-wrap">
+        <input type="text" name="user[username]" value="" placeholder="username" required="yes" aria-required="true">
+      </p>
+      <p id="second-input-wrap">
+        <input type="text" name="user[email]" value="" placeholder="email">
+      </p>
+      <p id="third-input-wrap">
+        <input type="password" name="user[password]" value="" placeholder="password" required="yes" aria-required="true">
+      </p>
+      <p id="fourth-input-wrap">
+        <input type="password" name="user[password_confirmation]" value="" placeholder="confirm password" required="yes" aria-required="true">
+      </p>
+      <input class="submit" type="submit">
+    </fieldset>
+  </form>
+</div>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>mtHEY</title>
+  <title>missed connections</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- backbone template -->
   <script type="text/template" id='connection-template'>
     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
       <div class="flipper">
         <div class="front">
-            <p class="<%%= train %>" id="train-line"><b><%%= train %></b></p>
+            <p id="train-line"><b><img src="/assets/<%%= train %>.png"></b></p>
+            <h3><em><%%= station %></em></h3>
+            <br>
+            <%%= direction %>
         </div>
         <div class="back">
           <HR>
@@ -24,6 +28,28 @@
       </div>
     </div>
   </script>
+  <!-- /bbone -->
+  <!-- responsive nav bar -->
+    <div id="menu">
+      <div class="menu-wrap">
+          <nav class="menu-items">
+              <ul>
+                <li><a href="/">home</a></li>
+                <!-- <li><a href="/users">users</a></li> -->
+                <% if current_user %>
+                <!-- <li><a href="/users/profile">my profile</a></li> -->
+                <li><a href="/logout">log out</a></li>
+                <% else %>
+                <li><a href="/login">log in</a></li>
+                <li><a href="/signup">sign up</a></li>
+                <% end %>
+              </ul>
+          </nav>
+          <a href="#" id="menuToggle">=</a>
+          <h1><a href="#">missed connections</a></h1>
+      </div>
+  </div>
+  <!-- end responsive nav -->
 
 </head>
 <body>

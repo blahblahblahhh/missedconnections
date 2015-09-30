@@ -27,7 +27,9 @@ Rails.application.routes.draw do
 
   get '/users/profile' => 'users#profile' #logged in individual users profile
 
+  #every train line
   get '/a' => 'welcome#a'
+  get '/c' => 'welcome#c'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -14,17 +14,7 @@
 //= require underscore
 //= require backbone
 //= require app
+//= require scripts
 //= require turbolinks
 
 console.log('users.js manifest loaded');
-
-$(document).ready(function() {
-    $('.connection').click(function() {
-            $(this).slideToggle("fade");
-    });
-
-    $('.A').click(function(){
-      $(this).not('.A').slideToggle("slow");
-    });
-
-});

@@ -70,5 +70,7 @@ $('form.create-connection').on('submit', function(e){
   e.preventDefault();
   var newMessage = $(this).find("#message").val();
   var trainLine = $(this).find("#train").val();
-  connections.create({message: newMessage, train: trainLine});
+  var trainDirection = $(this).find("#direction").val();
+  var trainStation = $(this).find("#station").val();
+  connections.create({message: newMessage, direction: trainDirection, station: trainStation, train: trainLine});
 });

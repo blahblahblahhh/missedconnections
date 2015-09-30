@@ -1,15 +1,61 @@
-<h1>welcome back, <%= @user.username %></h1>
-
-<br>
-    <input type="hidden" id='api-token' value="<%= @user.token %>">
-    <form class="create-connection" action="/api/connections" method="post">
-    <input type="text" id="train" name="connection[train]" placeholder="Select the line">
-    <input type="text" id="message" name="connection[message]" placeholder="Your connection here!">
-    <input type="submit" value="New missed connection">
-    </form>
-<br>
+<div id="nav">
+    <h1>welcome back, <%= @user.username %>.</h1>
+</div>
+<div class="input-container">
+  <form class="create-connection" action="/api/connections" method="post">
+      <input type="hidden" id='api-token' value="<%= @user.token %>">
+    <fieldset class="user-fieldset">
+      <h2 class="signup-info">create a new connection:</h2>
+      <p id="first-input-wrap">
+        <select name="connection[train]" id="train" required="yes" aria-required="true">
+                <option value="" disabled selected>select a train line</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+                <option value="seven">7</option>
+                <option value="A">A</option>
+                <option value="C">C</option>
+                <option value="E">E</option>
+                <option value="B">B</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="J">J</option>
+                <option value="Z">Z</option>
+                <option value="N">N</option>
+                <option value="Q">Q</option>
+                <option value="R">R</option>
+                <option value="L">L</option>
+                <option value="S">S</option>
+            </select>
+      </p>
+      <p id="second-input-wrap">
+            <select name="connection[direction]" id="direction"  required="yes" aria-required="true">
+                    <option value="" disabled selected>uptown or downtown?</option>
+                    <option value="UPTOWN">uptown</option>
+                    <option value="DOWNTOWN">downtown</option>
+            </select>
+      </p>
+      <p id="third-input-wrap">
+          <input type="text" id="station" name="connection[station]" placeholder="which station?">
+      </p>
+      <p id="fourth-input-wrap">
+          <input type="text" id="message" name="connection[message]" placeholder="your connection here!" required="yes" aria-required="true">
+      </p>
+      <input class="submit" type="submit" value="create!">
+    </fieldset>
+  </form>
+</div>
+<section>
+    <center><em>all of your connections:</em></center>
+    <hr>
 
 <div class="wrap">
-<section id="connection-list">
-</section>
+      <section id="connection-list">
+      </section>
  </div>
+</section>

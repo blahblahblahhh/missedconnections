@@ -1,35 +1,56 @@
-<h1 style="text-align: center">missed connections</h1>
-<br>
-<center>
-
-<div class="A">a</div>
-
-sort by train line:
-  <a href="/a"><p class="A" id="train-line"><b>A</b></p></a>
-
-</center>
-<hr>
-
+<!-- filter by train line -->
+  <center>
+  sort by train line:
+  <ul id="filter-trains">
+    <li>
+    <button class="filter A" id="A">A</button> <button class="filter C" id="C">C</button> <button class="filter E" id="E">E</button>
+    </li>
+    <li>
+    <button class="filter one" id="one">1</button> <button class="filter two" id="two">2</button> <button class="filter three" id="three">3</button>
+    </li>
+    <li>
+    <button class="filter four" id="four">4</button> <button class="filter six" id="five">5</button> <button class="filter six" id="six">6</button>
+    </li>
+    <li>
+    <button class="filter B" id="B">B</button> <button class="filter D" id="D">D</button> <button class="filter F" id="F">F</button> <button class="filter M" id="M">M</button>
+    </li>
+    <li>
+    <button class="filter J" id="J">J</button> <button class="filter Z" id="Z">Z</button>
+    </li>
+    <li>
+    <button class="filter N" id="N">N</button> <button class="filter Q" id="Q">Q</button> <button class="filter R" id="R">R</button>
+    </li>
+    <li>
+    <button class="filter G" id="G">G</button> <button class="filter seven" id="seven">7</button> <button class="filter L" id="L">L</button> <button class="filter S" id="S">S</button>
+    </li>
+    <br>
+    <li>
+      <button class="filter showall" id="all">ALL</button>
+    </li>
+  </ul>
+  <BR>
+  </center>
+<!-- end filter -->
+<HR>
 <div class="wrap">
 <% @connections.each do |connection| %>
-<div class="connection">
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-        <p class="<%= connection.train %>" id="train-line"><b><%= connection.train %></b></p>
-    </div>
-    <div class="back">
-      <HR>
-      <p id="connection-text">
-      "...<%= connection.message %>"
-      <br>
-
-      <!-- <button type="button" class='remove'>delete</button> -->
-    </p>
-      <BR>
+  <div class="connection" id="<%= connection.train %>">
+    <div class="flip-container" id="flip-toggle">
+      <div class="flipper">
+        <div class="front">
+            <p id="train-line"><%= image_tag connection.train %></b></p>
+            <h3><em><%= connection.station %></em></h3>
+            <br>
+            <%= connection.direction %>
+        </div>
+        <div class="back">
+            <HR>
+            <p id="connection-text">
+            "...<%= connection.message %>"
+            </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 <% end %>
 </div>

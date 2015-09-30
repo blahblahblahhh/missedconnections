@@ -28,7 +28,7 @@ class Api::ConnectionsController < ApplicationController
   private
 
   def connection_params
-    params.require(:connection).permit(:train, :message)
+    params.require(:connection).permit(:train, :direction, :station, :message)
   end
 
 end

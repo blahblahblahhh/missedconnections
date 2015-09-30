@@ -11,4 +11,8 @@ class WelcomeController < ApplicationController
     @connections = Connection.search('a')
   end
 
+  def c
+    @connections = Connection.search('c')
+  end
+
 end

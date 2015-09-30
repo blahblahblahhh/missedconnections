@@ -1,7 +1,15 @@
-<h1>LOG IN!!!!!!!</h1>
-
-<%= form_tag '/login' do %>
-Username: <%= text_field_tag 'user[username]' %>
-Password <%= password_field_tag 'user[password]' %>
-<%= submit_tag 'log in' %>
-<% end %>
+<div class="input-container">
+  <%= form_tag '/login' do %>
+    <fieldset class="user-fieldset">
+      <h2 class="signup-info">log in</h2>
+      <p id="first-input-wrap">
+        username: <%= text_field_tag 'user[username]' %>
+      </p>
+      <p id="second-input-wrap">
+        password: <%= password_field_tag 'user[password]' %>
+      </p>
+      <%= submit_tag 'log in' %>
+    </fieldset>
+    <% end %>
+  </form>
+</div>

@@ -1,4 +1,4 @@
-/* ------------------------ body styling */
+/* ------------------------------------------------------------- body styling */
 html {
   min-height: 100%;
   background: -webkit-linear-gradient(white, grey);
@@ -22,7 +22,6 @@ li {
   display: inline-block;
 }
 h1, h2, h3, h4, h5, h6 {
-	font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 }
 .wrap {
@@ -33,24 +32,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 25px;
   display: inline-block;
 }
-
-.accordion-toggle {cursor: pointer;}
-.accordion-content {display: none;}
-.accordion-content.default {display: block;}
-
-/* ---------------- card fipping  ----- */
+/* ----------------------------------------------------- card fipping  ----- */
 /* entire container, keeps perspective */
 .flip-container {
 perspective: 1000;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+/*.flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
+}*/
+.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
 }
 
 .flip-container, .front, .back {
-width: 220px;
-height: 220px;
+width: 200px;
+height: 200px;
 overflow: scroll;
 }
 
@@ -90,19 +87,32 @@ color: #fff;
   padding: 10px;
 }
 
-#train-line b {
-font-weight: bold;
-color: #fff;
-font-size: 2.2em;
-}
 
-#connection-text {
-  margin: 15px;
-  padding: 15px;
-}
+/* -------------------------------------------------- train line circle icons */
 
-/* --------------- train line classes */
-.A, .C, .E {
+  #train-line b {
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.2em;
+  }
+  #train-line img {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  #connection-text {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .filter {
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.2em;
+    border: 0;
+  }
+
+.A, .a, .C, .c, .E, .e {
   background-color: blue;
   height: 50px;
   width: 50px;
@@ -120,7 +130,7 @@ font-size: 2.2em;
   margin-top: 25px;
   text-align: center;
 }
-.B, .F, .M {
+.B, .b, .F, .f, .M, .m, .D, .d {
   background-color: orange;
   height: 50px;
   width: 50px;
@@ -128,4 +138,253 @@ font-size: 2.2em;
   margin: 0 auto;
   margin-top: 25px;
   text-align: center;
+}
+.one, .two, .three {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.four, .five, .six {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.N, .n, .R, .r, .Q, .q {
+  background-color: #cccc00;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+  color: #000;
+}
+.J, .j, .Z, .z {
+  background-color: #A5682A;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.G, .g {
+  background-color: lime;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.S, .s {
+  background-color: darkgrey;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.seven {
+  background-color: magenta;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.showall {
+  background-color: transparent;
+  border: 1px solid grey;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+  color: #000;
+}
+
+/* -------------------------------------- responsive navbar ---------------- */
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: #0088cc;
+}
+/* menu bar */
+ #menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    /*background: #fff;*/
+    z-index: 999;
+}
+.menu-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+#menu #menuToggle {
+    display: none;
+    float: right;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+    color: #333333;
+    background: #cccccc;
+}
+/* menu items */
+ #menu nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#menu nav ul {
+    list-style: none;
+}
+#menu nav ul li {
+    display: block;
+    float: left;
+}
+#menu nav ul li a {
+    display: block;
+    padding: 0 10px;
+}
+/* responsive styles */
+ @media screen and (max-width: 500px) {
+    #menu {
+        width: 100%;
+    }
+    .menu-wrap {
+        width: 100%;
+    }
+    #menu {
+        height: auto;
+    }
+    #menu nav {
+        display: none;
+        position: static;
+        width: 100%;
+        top: auto;
+        right: auto;
+    }
+    #menu nav ul li {
+        float: none;
+    }
+    #menu nav ul li a {
+        display: block;
+        padding: 5px 10px;
+        color: #333333;
+        background: #eee;
+        text-align: left;
+    }
+    #menu nav ul li a:hover, #menu nav ul li a.selected {
+        color: #ffffff;
+        background: #0088cc;
+    }
+    #menu #menuToggle {
+        display: block;
+    }
+    .filter {
+      height: 25px;
+      width: 25px;
+      font-size: 1em;
+    }
+    .showall {
+      width: auto;
+    }
+}
+/* ------------------------------sign up & login forms -------------------- */
+
+.input-container {
+  width: 90%;
+  height: auto;
+  margin: 10vh auto;
+  max-width: 750px;
+  border: none;
+}
+
+.input-container h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+form {
+  background: #7e7e7e;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
+.input-container p input, select {
+  background: #545454;
+  border-radius: 0;
+  border: 1px solid transparent;
+  color: #f8f8f8;
+  display: inline-block;
+  width: 85%;
+  outline: 0;
+  padding: 14px 20px;
+  overflow: hidden;
+  text-decoration: none;
+  max-width: 550px;
+  font-size: 15px;
+  transition: ease .35s;
+}
+
+.input-container select {
+  width: 95%; 
+}
+
+.input-container input[type=text]:focus {
+  border: none;
+  border-left: 10px solid seagreen;
+}
+
+.input-container input[type=email]:focus {
+  border: none;
+  border-left: 10px solid #d9534f;
+}
+
+.input-container input[type=submit]:focus {
+  background: #3f3f3f;
+  border: none;
+  border-bottom: 2px solid lightseagreen;
+}
+
+.input-container input[type=submit] {
+  background: #3f3f3f;
+  border: none;
+  float: right;
+  margin-right: 70px;
+  color: #f8f8f8;
+  display: inline-block;
+  outline: 0;
+  padding: 14px 20px;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: ease .15s;
 }
