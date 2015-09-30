@@ -61,8 +61,8 @@ transform-style: preserve-3d;
 .front, .back {
 backface-visibility: hidden;
 position: absolute;
-top: 0;
-left: 0;
+margin-top: 0;
+margin-left: 0;
 }
 
 /* front pane, placed above back */
@@ -83,7 +83,7 @@ transform: rotateY(180deg);
 color: #fff;
 }
 .cards {
-  float: left;
+  /*float: left;*/
   padding: 10px;
 }
 
@@ -356,7 +356,7 @@ fieldset {
 }
 
 .input-container select {
-  width: 95%; 
+  width: 95%;
 }
 
 .input-container input[type=text]:focus {
