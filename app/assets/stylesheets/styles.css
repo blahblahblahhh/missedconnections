@@ -67,6 +67,9 @@ transform-style: preserve-3d;
 -moz-transform-style: preserve-3d;
 -o-transform-style: preserve-3d;
 }
+.flipper {
+-webkit-transform-style: preserve-3d;
+}
 
 /* hide back of pane during swap */
 .front, .back {
