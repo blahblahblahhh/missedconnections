@@ -43,6 +43,10 @@ perspective: 1000;
 }*/
 .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
 
 .flip-container, .front, .back {
@@ -63,6 +67,7 @@ backface-visibility: hidden;
 position: absolute;
 margin-top: 0;
 margin-left: 0;
+/* added margin- to help mobile view */
 }
 
 /* front pane, placed above back */
@@ -73,6 +78,10 @@ background: rgba(54, 25, 25, .2);
 z-index: 2;
 /* for firefox 31 */
 transform: rotateY(0deg);
+-ms-transform: rotateY(0deg);
+-webkit-transform: rotateY(0deg);
+-moz-transform: rotateY(0deg);
+-o-transform: rotateY(0deg);
 border-radius: 50%;
 }
 
@@ -80,6 +89,10 @@ border-radius: 50%;
 .back {
 background-color: #000;
 transform: rotateY(180deg);
+-ms-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
 color: #fff;
 }
 .cards {
