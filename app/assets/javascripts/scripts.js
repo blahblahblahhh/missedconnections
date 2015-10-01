@@ -46,4 +46,11 @@ console.log('scripts.js loaded');
      $(".wrap").children().show();
       });
 
+
     });
+
+
+    // $("#train").click(function() {
+    // $("#").attr("checked", false); //uncheck all checkboxes
+    // $(this).attr("checked", true);  //check the clicked one
+    // });
