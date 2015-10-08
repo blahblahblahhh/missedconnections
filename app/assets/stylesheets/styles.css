@@ -356,6 +356,7 @@ a:hover {
       width: 30px;
       font-size: 1em;
       border-radius: 50%;
+      text-align: center;
     }
     .showall {
       width: auto;

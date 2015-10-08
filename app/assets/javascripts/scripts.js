@@ -29,7 +29,7 @@ console.log('scripts.js loaded');
 
        $('#menuToggle').on('click', function (e) {
            e.preventDefault();
-           $("#menu nav").slideToggle(1000, 'swing');
+           $("#menu nav").slideToggle(300, 'swing');
        });
 
    });
