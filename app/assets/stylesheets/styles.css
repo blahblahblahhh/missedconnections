@@ -298,6 +298,7 @@ a:hover {
     overflow: hidden;
     color: #333333;
     background: #cccccc;
+    border-radius: 50%;
 }
 /* menu items */
  #menu nav {
@@ -350,6 +351,7 @@ a:hover {
     }
     #menu #menuToggle {
         display: block;
+        border-radius: 50%;
     }
     .filter {
       height: 30px;
