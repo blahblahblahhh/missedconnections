@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   get '/users/profile' => 'users#profile' #logged in individual users profile
 
-  #every train line
+  #extra train line info pages
   get '/a' => 'welcome#a'
   get '/c' => 'welcome#c'
 

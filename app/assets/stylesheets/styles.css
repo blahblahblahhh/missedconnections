@@ -70,6 +70,9 @@ transform-style: preserve-3d;
 .flipper {
 -webkit-transform-style: preserve-3d;
 }
+.flipper::-webkit-scrollbar {
+ display: none;
+}
 
 /* hide back of pane during swap */
 .front, .back {
@@ -83,7 +86,6 @@ margin-top: 0;
 margin-left: 0;
 /* added margin- to help mobile view */
 }
-
 /* front pane, placed above back */
 .front {
 /*background-color: red;*/
@@ -120,6 +122,14 @@ color: #fff;
 .cards {
   /*float: left;*/
   padding: 10px;
+}
+
+/*-- hide scrollbars --*/
+.front::-webkit-scrollbar {
+ display: none;
+}
+.back::-webkit-scrollbar {
+ display: none;
 }
 
 
@@ -434,7 +444,7 @@ fieldset {
 
 
 
-
+/*
 
 .cc-selector input{
     margin:0;padding:0;
@@ -466,12 +476,12 @@ fieldset {
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
-    /*-webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
        -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);*/
+            filter: brightness(1.8) grayscale(1) opacity(.7);
 }
 .drinkcard-cc:hover{
     -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
        -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
             filter: brightness(1.2) grayscale(.5) opacity(.9);
-}
+}*/
