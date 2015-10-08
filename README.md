@@ -1,4 +1,5 @@
 # Missed Connections
+[View the online demo](http://missed-connections.herokuapp.com/ "Missed Connections").
 
 ![Missed Connections](http://i.imgur.com/DB3DLWV.png)
 
