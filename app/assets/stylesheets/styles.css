@@ -32,6 +32,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 25px;
   display: inline-block;
 }
+#login {
+  margin-top: 0;
+}
 /* ----------------------------------------------------- card fipping  ----- */
 /* entire container, keeps perspective */
 .flip-container {
